@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  description: Descripción de la especificación para Esposc
+  version: 1.0.0
+  title: Esposc
+  contact:
+    email: alvaroczxp@gmail.com
+components:
+  schemas:
+    Value:
+      type: object
+      properties:
+        min:
+          type: number
+          default: 0
+        max:
+          type: number
+          default: 1
+        default:
+          type: number
+        steps:
+          type: number
+          default: 1
+        origin:
+          type: number
+          default: 0
+    Fader:
+      type: object
+      properties:
+        value:
+          $ref: "#/components/schemas/Value"
+        direction:
+          type: string
+          enum:
+            - vertical
+            - horizontal
+          default: vertical
+        return:
+          1ype: boolean
+          default: false

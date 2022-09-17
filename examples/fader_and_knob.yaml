@@ -1,0 +1,13 @@
+kind: Fader
+spec:
+  osc:
+    route: /part@{parent.variables.n}/Pvolume
+    typeTags: i
+  value:
+    min: 0
+    max: 127
+    default: 0
+    steps: 1
+    origin: 0
+  direction: vertical
+  return: false
