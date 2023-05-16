@@ -6,8 +6,20 @@ spec:
   value:
     min: 0
     max: 127
-    default: 0
+    defaultValue: 0
     steps: 1
     origin: 0
   direction: vertical
   return: false
+---
+kind: Knob
+spec:
+  osc:
+    route: /part@{parent.variables.n}/kit0/adpars/GlobalPar/GlobalFilter/Pfreq
+    typeTags: i
+  value:
+    min: 0
+    max: 127
+    defaultValue: 64
+    steps: 1
+    origin: 0
